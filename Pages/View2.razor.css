@@ -1,0 +1,7 @@
+.view-2-container {
+    align-items: stretch;
+    height: 100%;
+}
+.row-layout {
+    display: flex;
+}
