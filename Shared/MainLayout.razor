@@ -3,27 +3,71 @@
 
 <div class="master-view-container column-layout">
     <IgbNavbar class="navbar" master-view-scope>
-        <div>
-            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/"))" class="button" master-view-scope>
-                View 1
-                <IgbRipple></IgbRipple>
-            </IgbButton>
-            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/view-2"))" class="button" master-view-scope>
-                View 2
-                <IgbRipple></IgbRipple>
-            </IgbButton>
-            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/view-3"))" class="button" master-view-scope>
-                View 3
+        <div slot="start">
+            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => NavDrawer?.Toggle())">
+                <span class="material-icons">
+                    menu
+                </span>
                 <IgbRipple></IgbRipple>
             </IgbButton>
         </div>
+        <div slot="end">
+            <IgbButton Variant="ButtonVariant.Flat">
+                <span class="material-icons">
+                    search
+                </span>
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat">
+                <span class="material-icons">
+                    favorite
+                </span>
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat">
+                <span class="material-icons">
+                    more_vert
+                </span>
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+        </div>
+        <div>App Name</div>
     </IgbNavbar>
-    <div class="view-container">
-        @Body
+    <div class="group row-layout">
+        <div class="view-container">
+            @Body
+        </div>
+        <IgbNavDrawer @ref="NavDrawer" class="nav-drawer" master-view-scope>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/"))" class="nav-drawer-item" master-view-scope>
+                <span slot="icon">
+                    <span class="material-icons icon">
+                        book
+                    </span>
+                </span>
+                <div slot="content">View 1</div>
+            </IgbNavDrawerItem>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/view-2"))" class="nav-drawer-item" master-view-scope>
+                <span slot="icon">
+                    <span class="material-icons icon">
+                        assessment
+                    </span>
+                </span>
+                <div slot="content">View 2</div>
+            </IgbNavDrawerItem>
+            <IgbNavDrawerItem @onclick="@(e => Navigate("/view-3"))" class="nav-drawer-item" master-view-scope>
+                <span slot="icon">
+                    <span class="material-icons icon">
+                        assignment_turned_in
+                    </span>
+                </span>
+                <div slot="content">View 3</div>
+            </IgbNavDrawerItem>
+        </IgbNavDrawer>
     </div>
 </div>
 
 @code {
+    private IgbNavDrawer? NavDrawer;
     private void Navigate(string path)
     {
         NavigationManager.NavigateTo(path);
