@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Navcontent": {
+    "Headernavcontent": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
