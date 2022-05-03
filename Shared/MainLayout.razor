@@ -3,23 +3,75 @@
 
 <div class="master-view-container column-layout">
     <IgbNavbar class="navbar" master-view-scope>
-        <div>
-            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/"))" class="button" master-view-scope>
-                View 1
+        <div slot="end">
+            <IgbButton Variant="ButtonVariant.Flat">
+                <span class="material-icons">
+                    search
+                </span>
                 <IgbRipple></IgbRipple>
             </IgbButton>
-            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/view-2"))" class="button" master-view-scope>
-                View 2
+            <IgbButton Variant="ButtonVariant.Flat">
+                <span class="material-icons">
+                    favorite
+                </span>
                 <IgbRipple></IgbRipple>
             </IgbButton>
-            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/view-3"))" class="button" master-view-scope>
-                View 3
+            <IgbButton Variant="ButtonVariant.Flat">
+                <span class="material-icons">
+                    more_vert
+                </span>
                 <IgbRipple></IgbRipple>
             </IgbButton>
         </div>
+        <div>App Name</div>
     </IgbNavbar>
-    <div class="view-container">
-        @Body
+    <div class="group_1 row-layout">
+        <IgbNavDrawer Position="NavDrawerPosition.Relative" class="nav-drawer" master-view-scope>
+            <div slot="mini">
+                <IgbNavDrawerItem @onclick="@(e => Navigate("/"))" class="nav-drawer-item" master-view-scope>
+                    <span slot="icon">
+                        <span class="material-icons icon">
+                            account_circle
+                        </span>
+                    </span>
+                </IgbNavDrawerItem>
+                <IgbNavDrawerItem @onclick="@(e => Navigate("/view-2"))" class="nav-drawer-item" master-view-scope>
+                    <span slot="icon">
+                        <span class="material-icons icon">
+                            assignment_turned_in
+                        </span>
+                    </span>
+                </IgbNavDrawerItem>
+                <IgbNavDrawerItem @onclick="@(e => Navigate("/view-3"))" class="nav-drawer-item" master-view-scope>
+                    <span slot="icon">
+                        <span class="material-icons icon">
+                            assessment
+                        </span>
+                    </span>
+                </IgbNavDrawerItem>
+            </div>
+            <IgbNavDrawerItem class="nav-drawer-item" master-view-scope>
+                <span slot="icon">
+                    <span class="material-icons icon">
+                        account_circle
+                    </span>
+                </span>
+                <div slot="content">Title goes here</div>
+            </IgbNavDrawerItem>
+        </IgbNavDrawer>
+        <div class="group_1 column-layout">
+            <div class="view-container">
+                @Body
+            </div>
+        </div>
+        <div class="group column-layout">
+            <p class="typography__subtitle-2 text">
+                FIXED PANE (GLOBAL)
+            </p>
+            <p class="typography__body-2 text_1">
+                Ut finibus risus eros, et bibendum ante eleifend ac. Sed justo felis, ultrices vel velit quis, sodales consectetur tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sed consectetur mi.
+            </p>
+        </div>
     </div>
 </div>
 
