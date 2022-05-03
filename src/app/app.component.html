@@ -1,0 +1,63 @@
+<igx-navbar class="navbar">
+  <ng-container>
+    <button igxButton="icon" igxRipple>
+      <igx-icon>
+        search
+      </igx-icon>
+    </button>
+    <button igxButton="icon" igxRipple>
+      <igx-icon>
+        favorite
+      </igx-icon>
+    </button>
+    <button igxButton="icon" igxRipple>
+      <igx-icon>
+        more_vert
+      </igx-icon>
+    </button>
+  </ng-container>
+  <igx-navbar-title>App Name</igx-navbar-title>
+</igx-navbar>
+<div class="group_1 row-layout">
+  <igx-nav-drawer [pin]="true" [pinThreshold]="1024" width="320px" class="nav-drawer">
+    <ng-template igxDrawerMini>
+      <div igxDrawerItem routerLink="/view1" class="nav-drawer-item">
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+      </div>
+      <div igxDrawerItem routerLink="/view2" class="nav-drawer-item">
+        <igx-icon class="icon">
+          assignment_turned_in
+        </igx-icon>
+      </div>
+      <div igxDrawerItem routerLink="/view3" class="nav-drawer-item">
+        <igx-icon class="icon">
+          assessment
+        </igx-icon>
+      </div>
+    </ng-template>
+    <ng-template igxDrawer>
+      <div igxDrawerItem class="nav-drawer-item">
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+        <div>Title goes here</div>
+      </div>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="group_1 column-layout">
+    <div class="view-container">
+      <router-outlet></router-outlet>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="group column-layout">
+    <p class="igx-typography__subtitle-2 text">
+      FIXED PANE (GLOBAL)
+    </p>
+    <p class="igx-typography__body-2 text_1">
+      Ut finibus risus eros, et bibendum ante eleifend ac. Sed justo felis, ultrices vel velit quis, sodales consectetur tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sed consectetur mi.
+    </p>
+  </div>
+</div>
