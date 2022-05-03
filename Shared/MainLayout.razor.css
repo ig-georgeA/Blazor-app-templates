@@ -1,8 +1,19 @@
 .master-view-container {
-    align-items: stretch;
     height: 100%;
+    align-items: stretch;
+}
+.group {
+    min-width: 50px;
+    min-height: 50px;
+    flex-basis: 0;
+    align-items: stretch;
+    position: relative;
+    flex-grow: 1;
 }
 .view-container {
+    min-width: 0;
+    min-height: 0;
+    margin: 32px;
     position: relative;
     flex-grow: 1;
 }
@@ -10,13 +21,23 @@
     height: max-content;
     min-width: min-content;
 }
-.button {
-    margin: 0 8px 0 0;
-    height: max-content;
+.nav-drawer {
+    flex-shrink: 0;
+    width: 320px;
     min-width: min-content;
+    min-height: 0;
 }
-.button::part(base) {
-    color: hsla(var(--igc-gray-900));
+.nav-drawer-item {
+    min-width: 0;
+    min-height: 0;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+.row-layout {
+    display: flex;
 }
 .column-layout {
     display: flex;
