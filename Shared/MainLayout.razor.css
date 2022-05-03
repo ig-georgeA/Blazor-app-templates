@@ -1,22 +1,109 @@
 .master-view-container {
-    align-items: stretch;
     height: 100%;
+    align-items: stretch;
+}
+.header {
+    height: 71px;
+    justify-content: space-between;
+    padding: 0 24px;
+    min-height: 71px;
+    border-width: 0px 0px 1px;
+    border-color: hsla(var(--igc-gray-200));
+    border-style: solid;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
 }
 .view-container {
-    position: relative;
+    min-height: 0;
+    min-width: 0;
+    flex-basis: 0;
     flex-grow: 1;
 }
-.navbar {
+.footer {
+    min-height: 70px;
+    border-width: 2px 0px 0px;
+    min-width: 70px;
+    border-color: hsla(var(--igc-gray-200));
+    border-style: solid;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.content-main {
+    min-width: 300px;
+    overflow: auto;
+    background-color: transparent;
+    flex-basis: 0;
+    justify-content: center;
+    padding: 32px;
+    flex-grow: 1;
+    align-items: stretch;
+    position: relative;
+    min-height: 50px;
+}
+.group {
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.main-section {
+    align-content: stretch;
+    flex-grow: 1;
+    min-width: 50px;
+    align-items: stretch;
+    min-height: 50px;
+    flex-shrink: 0;
+}
+.group_1 {
+    width: 20%;
+    background-color: hsla(var(--igc-gray-100));
+    padding: 32px;
+    min-width: 50px;
+    align-items: stretch;
+    position: relative;
+    min-height: 50px;
+    flex-shrink: 0;
+}
+.text {
+    margin: 0 0 16px;
     height: max-content;
     min-width: min-content;
 }
-.button {
-    margin: 0 8px 0 0;
+.group_2 {
+    min-width: 50px;
+    align-items: center;
+    position: relative;
+    min-height: 50px;
+    flex-shrink: 0;
+}
+.group_3 {
+    align-items: center;
+    min-height: 50px;
+    flex-shrink: 0;
+}
+.element {
     height: max-content;
     min-width: min-content;
+}
+.avatar {
+    margin: 0 16px 0 0;
+}
+.button {
+    height: max-content;
+    min-width: min-content;
+    flex-shrink: 0;
 }
 .button::part(base) {
     color: hsla(var(--igc-gray-900));
+}
+.button_1 {
+    margin: 0 16px 0 0;
+}
+.row-layout {
+    display: flex;
 }
 .column-layout {
     display: flex;
