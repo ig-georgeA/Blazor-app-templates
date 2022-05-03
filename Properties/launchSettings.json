@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Navcontent": {
+    "Navside_panecontent": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using IgniteUI.Blazor.Controls;
-using Navcontent;
+using Navside_panecontent;
 
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -18,6 +18,7 @@ void RegisterIgniteUI(IServiceCollection services)
     services.AddIgniteUIBlazor(
         typeof(IgbNavbarModule),
         typeof(IgbButtonModule),
+        typeof(IgbIconModule),
         typeof(IgbRippleModule)
     );
 }

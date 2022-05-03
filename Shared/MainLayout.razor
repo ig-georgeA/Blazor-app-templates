@@ -3,23 +3,46 @@
 
 <div class="master-view-container column-layout">
     <IgbNavbar class="navbar" master-view-scope>
-        <div>
-            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/"))" class="button" master-view-scope>
-                View 1
+        <div slot="end">
+            <IgbButton Variant="ButtonVariant.Flat">
+                <span class="material-icons">
+                    search
+                </span>
                 <IgbRipple></IgbRipple>
             </IgbButton>
-            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/view-2"))" class="button" master-view-scope>
-                View 2
+            <IgbButton Variant="ButtonVariant.Flat">
+                <span class="material-icons">
+                    favorite
+                </span>
                 <IgbRipple></IgbRipple>
             </IgbButton>
-            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/view-3"))" class="button" master-view-scope>
-                View 3
+            <IgbButton Variant="ButtonVariant.Flat">
+                <span class="material-icons">
+                    more_vert
+                </span>
                 <IgbRipple></IgbRipple>
             </IgbButton>
         </div>
+        <div>App Title</div>
     </IgbNavbar>
-    <div class="view-container">
-        @Body
+    <div class="group_1 row-layout">
+        <div class="group column-layout">
+            <p class="typography__subtitle-2 text">
+                FIXED PANE
+            </p>
+            <a @onclick="@(e => Navigate("/"))" class="typography__body-1 hyperlink">
+                View 1
+            </a>
+            <a @onclick="@(e => Navigate("/view-2"))" class="typography__body-1 hyperlink">
+                View 2
+            </a>
+            <a @onclick="@(e => Navigate("/view-3"))" class="typography__body-1 hyperlink">
+                View 3
+            </a>
+        </div>
+        <div class="view-container">
+            @Body
+        </div>
     </div>
 </div>
 
