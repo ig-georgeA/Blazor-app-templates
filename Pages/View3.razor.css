@@ -2,6 +2,7 @@
     align-items: stretch;
     height: 100%;
 }
-.row-layout {
+.column-layout {
     display: flex;
+    flex-direction: column;
 }

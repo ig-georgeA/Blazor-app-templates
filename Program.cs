@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using IgniteUI.Blazor.Controls;
-using Navcontent;
+using Navcentered_contentfooter;
 
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -16,8 +16,9 @@ await builder.Build().RunAsync();
 void RegisterIgniteUI(IServiceCollection services)
 {
     services.AddIgniteUIBlazor(
-        typeof(IgbNavbarModule),
+        typeof(IgbAvatarModule),
         typeof(IgbButtonModule),
-        typeof(IgbRippleModule)
+        typeof(IgbRippleModule),
+        typeof(IgbIconModule)
     );
 }
