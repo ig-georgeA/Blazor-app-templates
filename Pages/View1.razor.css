@@ -3,15 +3,22 @@
     align-items: stretch;
 }
 .group {
-    position: relative;
+    width: 20%;
+    background-color: hsla(var(--igc-gray-100));
     padding: 32px;
     min-width: 50px;
     min-height: 50px;
-    flex-grow: 1;
-    flex-basis: 0;
     align-items: stretch;
 }
-.h5 {
+.group_1 {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 32px;
+    min-width: 50px;
+    min-height: 50px;
+    align-items: stretch;
+}
+.element {
     margin: 0 0 16px;
     height: max-content;
     min-width: min-content;
