@@ -2,24 +2,59 @@
 @inject NavigationManager NavigationManager
 
 <div class="master-view-container column-layout">
-    <IgbNavbar class="navbar" master-view-scope>
-        <div>
-            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/"))" class="button" master-view-scope>
-                View 1
-                <IgbRipple></IgbRipple>
-            </IgbButton>
-            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/view-2"))" class="button" master-view-scope>
-                View 2
-                <IgbRipple></IgbRipple>
-            </IgbButton>
-            <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/view-3"))" class="button" master-view-scope>
-                View 3
-                <IgbRipple></IgbRipple>
-            </IgbButton>
+    <div class="header row-layout">
+        <div class="group row-layout">
+            <div class="group_2 row-layout">
+                <IgbAvatar Src="assets/Logo.svg" Shape="AvatarShape.Circle" class="avatar" master-view-scope></IgbAvatar>
+                <h6 class="element h6">
+                    App Name
+                </h6>
+            </div>
+            <div class="group_1 row-layout">
+                <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/"))" class="button button_1" master-view-scope>
+                    VIEW 1
+                    <IgbRipple></IgbRipple>
+                </IgbButton>
+                <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/view-2"))" class="button button_1" master-view-scope>
+                    VIEW 2
+                    <IgbRipple></IgbRipple>
+                </IgbButton>
+                <IgbButton Variant="ButtonVariant.Flat" @onclick="@(e => Navigate("/view-3"))" class="button" master-view-scope>
+                    VIEW 3
+                    <IgbRipple></IgbRipple>
+                </IgbButton>
+            </div>
+            <div class="group_2 group_3 row-layout">
+                <IgbButton Variant="ButtonVariant.Flat" class="button_1" master-view-scope>
+                    <span class="material-icons">
+                        account_circle
+                    </span>
+                    <IgbRipple></IgbRipple>
+                </IgbButton>
+                <IgbButton Variant="ButtonVariant.Flat" class="button_1" master-view-scope>
+                    <span class="material-icons">
+                        shopping_cart
+                    </span>
+                    <IgbRipple></IgbRipple>
+                </IgbButton>
+                <IgbButton Variant="ButtonVariant.Flat">
+                    <span class="material-icons">
+                        help
+                    </span>
+                    <IgbRipple></IgbRipple>
+                </IgbButton>
+            </div>
         </div>
-    </IgbNavbar>
-    <div class="view-container">
-        @Body
+    </div>
+    <div class="centered-content column-layout">
+        <div class="view-container">
+            @Body
+        </div>
+    </div>
+    <div class="footer row-layout">
+        <p class="typography__body-2 element">
+            Ut eros nunc, finibus ut nunc at, gravida mollis enim
+        </p>
     </div>
 </div>
 
