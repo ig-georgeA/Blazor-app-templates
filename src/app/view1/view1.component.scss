@@ -1,0 +1,26 @@
+:host {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+.group {
+  align-items: stretch;
+  padding: 32px;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.h5 {
+  margin: 0 0 16px;
+  min-width: min-content;
+  height: max-content;
+}
+.text {
+  min-width: min-content;
+  height: max-content;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
