@@ -1,0 +1,48 @@
+<igx-navbar class="navbar">
+  <igx-navbar-title>App Name</igx-navbar-title>
+</igx-navbar>
+<div class="group row-layout">
+  <igx-nav-drawer [pin]="true" [pinThreshold]="0" width="320px" class="nav-drawer">
+    <ng-template igxDrawerMini>
+      <div igxDrawerItem routerLink="/view1" class="nav-drawer-item">
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+      </div>
+      <div igxDrawerItem routerLink="/view2" class="nav-drawer-item">
+        <igx-icon class="icon">
+          assignment_turned_in
+        </igx-icon>
+      </div>
+      <div igxDrawerItem routerLink="/view3" class="nav-drawer-item">
+        <igx-icon class="icon">
+          assessment
+        </igx-icon>
+      </div>
+    </ng-template>
+    <ng-template igxDrawer>
+      <div igxDrawerItem class="nav-drawer-item">
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+        <div>View 1</div>
+      </div>
+      <div igxDrawerItem class="nav-drawer-item">
+        <igx-icon class="icon">
+          assignment_turned_in
+        </igx-icon>
+        <div>View 2</div>
+      </div>
+      <div igxDrawerItem class="nav-drawer-item">
+        <igx-icon class="icon">
+          assessment
+        </igx-icon>
+        <div>View 3</div>
+      </div>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="view-container">
+    <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+  </div>
+</div>
